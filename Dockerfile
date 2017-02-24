@@ -3,6 +3,8 @@ FROM ruby:2.2
 RUN apt-get update; apt-get install libgmp3-dev --assume-yes
 RUN mkdir /pagerbot
 
+LABEL app=r101-pagerbot
+
 WORKDIR /pagerbot
 ADD Gemfile* *.gemspec /pagerbot/
 RUN bundle install
