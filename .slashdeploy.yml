@@ -1,0 +1,11 @@
+# For information about what configuration options are available, see
+# https://slashdeploy.io/docs"
+---
+environments:
+  production:
+    continuous_delivery:
+      ref: refs/heads/master
+      required_contexts:
+      - ci/circleci
+      - container/docker
+  staging: {}
